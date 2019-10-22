@@ -40,7 +40,9 @@ public class MeuServlet extends HttpServlet {
             out.println("<title>Servlet MeuServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet MeuServlet no contexto " + request.getContextPath() + "</h1>");
+            request.setCharacterEncoding("UTF-8");
+            out.println("<h1>Nome: " + request.getParameter("nome") + "</h1>");
+            out.println("<p>Parâmetros: " + request.getQueryString() + "</p>");
             out.println("</body>");
             out.println("</html>");
         }
